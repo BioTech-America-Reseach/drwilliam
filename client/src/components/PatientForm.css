@@ -1,0 +1,210 @@
+.form-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-content {
+  background: rgba(15, 52, 96, 0.8);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.form-content h1 {
+  font-size: 28px;
+  color: #00d4ff;
+  text-align: center;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-section {
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  padding-bottom: 20px;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  color: #00d4ff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.symptom-input {
+  display: flex;
+  gap: 10px;
+}
+
+.symptom-input input {
+  flex: 1;
+}
+
+.btn-add-symptom {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00d4ff, #0096ff);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-add-symptom:hover:not(:disabled) {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-add-symptom:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.symptoms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  min-height: 35px;
+}
+
+.symptom-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: #00d4ff;
+  font-size: 13px;
+}
+
+.remove-symptom {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.remove-symptom:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
+
+.symptom-count {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 8px;
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-submit {
+  flex: 1;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #00d4ff, #ffeb3b);
+  border: none;
+  border-radius: 5px;
+  color: #1a1a2e;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 10px rgba(255, 235, 59, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .form-container { padding: 20px; }
+  .form-content { padding: 20px; }
+  .form-content h1 { font-size: 22px; }
+  .form-row { grid-template-columns: 1fr; }
+  .symptom-input { flex-direction: column; }
+  .btn-add-symptom { width: 100%; }
+}

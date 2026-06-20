@@ -1,0 +1,296 @@
+.diagnosis-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 40px 20px;
+}
+
+.diagnosis-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.diagnosis-header h1 {
+  font-size: 36px;
+  color: #00d4ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
+.diagnosis-header p {
+  color: #b0b0b0;
+  font-size: 16px;
+}
+
+.diagnosis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto 40px;
+}
+
+.card {
+  background: rgba(15, 52, 96, 0.6);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2), 0 0 20px rgba(0, 212, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #00d4ff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+.patient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-row .label {
+  color: #888888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-row .value {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.value.zodiac {
+  background: linear-gradient(135deg, #00d4ff, #ffeb3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.primary-diagnosis {
+  grid-column: span auto;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 235, 59, 0.1));
+  border: 2px solid rgba(0, 212, 255, 0.5);
+}
+
+.main-condition {
+  text-align: center;
+}
+
+.condition-name {
+  font-size: 24px;
+  color: #ffeb3b;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.6);
+}
+
+.condition-score {
+  color: #00d4ff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.conditions-list ol {
+  list-style: none;
+  padding: 0;
+}
+
+.conditions li {
+  display: grid;
+  grid-template-columns: 30px 1fr 80px;
+  gap: 15px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 5px;
+  border-left: 3px solid #00d4ff;
+  align-items: center;
+}
+
+.conditions .rank {
+  color: #ffeb3b;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.conditions .condition {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.conditions .score {
+  color: #00d4ff;
+  font-size: 12px;
+  text-align: right;
+}
+
+.organs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+}
+
+.organ-item {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.organ-item:hover {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: #00d4ff;
+  transform: scale(1.05);
+}
+
+.organ-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.organ-name {
+  color: #00d4ff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.factors-list {
+  list-style: none;
+  padding: 0;
+}
+
+.factors-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.risk-icon {
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.recommendations-list {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendations-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.rec-icon {
+  color: #00d4ff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.diagnosis-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.btn-pdf,
+.btn-new-test {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-pdf {
+  background: linear-gradient(135deg, #00d4ff, #0096ff);
+  color: #ffffff;
+}
+
+.btn-pdf:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-pdf:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-new-test {
+  background: linear-gradient(135deg, #ffeb3b, #ffd700);
+  color: #1a1a2e;
+}
+
+.btn-new-test:hover {
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+  transform: translateY(-2px);
+}
+
+.pdf-notification {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background: rgba(0, 212, 255, 0.2);
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  border-radius: 8px;
+  color: #00d4ff;
+  text-align: center;
+  font-weight: bold;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .diagnosis-grid { grid-template-columns: 1fr; }
+  .diagnosis-header h1 { font-size: 28px; }
+  .conditions li { grid-template-columns: 25px 1fr; }
+  .conditions .score { display: none; }
+  .diagnosis-actions { flex-direction: column; }
+  .btn-pdf, .btn-new-test { min-width: 100%; }
+}
